@@ -1,7 +1,6 @@
 
-
-// Define API URLs
-const filmsUrl = 'http://localhost:3000/films' ; // For fetching all films
+// Define URLs
+const filmsUrl = 'http://localhost:3000/films'; // For fetching all films
 const filmUrl = 'http://localhost:3000/films/1'; // For fetching details of the first film (id: 1)
 
 // Function to calculate available tickets
@@ -16,14 +15,14 @@ fetch(filmUrl)
     .then(response => response.json())
     .then(film => {
         document.getElementById('movie-title').innerText = film.title;
-        //document.getElementById('movie-poster').src= film.poster;
+        document.getElementById('movie-poster').src= film.poster;
         document.getElementById('movie-description').textContent = film.description;
         document.getElementById('movie-runtime').textContent = film.runtime;
         document.getElementById('movie-showtime').textContent = film.showtime;
         document.getElementById('movie-capacity').textContent = film.capacity;
 
         const availableTickets = calculateAvailableTickets(film);
-        document.getElementById('available-tickets').textContent =film.availableTickets;
+        document.getElementById('available-tickets').textContent = film.availableTickets;
         const buyTicketButton = document.getElementById('buy-ticket-button');
         buyTicketButton.disabled = availableTickets <= 0;
 
