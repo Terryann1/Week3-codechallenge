@@ -20,6 +20,8 @@ fetch(filmUrl)
         document.getElementById('movie-runtime').textContent = film.runtime;
         document.getElementById('movie-showtime').textContent = film.showtime;
         document.getElementById('movie-capacity').textContent = film.capacity;
+        document.getElementById('movie-ticket').textContent = film.tickets_sold;
+
 
         const availableTickets = calculateAvailableTickets(film);
         document.getElementById('available-tickets').textContent = film.availableTickets;
@@ -29,7 +31,7 @@ fetch(filmUrl)
         buyTicketButton.addEventListener('click', () => {
             if (availableTickets > 0) {
                 // Update UI after buying ticket (decrease available tickets)
-                document.getElementById('available-tickets').textContent = availableTickets - 1;
+                document.getElementById('available-tickets').textContent = availableTickets;
                 buyTicketButton.disabled = availableTickets - 1 <= 0; // Disable button if sold out
             }
         });
