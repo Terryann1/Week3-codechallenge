@@ -5,3 +5,11 @@ body {
     background-color: black;
     color: white;
 }
+/* Header Styling */
+header {
+    background-color:orangered;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid orangered;
+}
