@@ -45,6 +45,7 @@ main {
 
 #film-details img {
     max-width: 200px;
+    max-height: 200px;
     border-radius: 8px;
     margin-bottom: 25px;
     margin-left: 25px;
@@ -54,4 +55,24 @@ main {
 #film-details p {
     font-size: 1rem;
     margin: 10px 0;
+}
+
+
+#buy-ticket-button {
+    background-color: orangered;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#buy-ticket-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#buy-ticket-button:hover:not(:disabled) {
+    background-color: #388E3C;
 }
