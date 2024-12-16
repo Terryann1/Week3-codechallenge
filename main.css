@@ -21,3 +21,10 @@ header h2{
     font-weight: normal;
 
 }
+/* Main Section Styles */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
