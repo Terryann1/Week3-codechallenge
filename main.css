@@ -24,7 +24,34 @@ header h2{
 /* Main Section Styles */
 main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
     gap: 20px;
+    text-align: center;
+}
+#film-details {
+    flex: 2;
+    background-color:black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    
+}
+#film-details h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#film-details img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    padding: 10px;
+}
+
+#film-details p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
