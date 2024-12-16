@@ -12,19 +12,19 @@ function calculateAvailableTickets(film) {
 
 // Fetch details of the first movie and display it
 fetch(filmUrl)
-    .then(response => response.json())
-    .then(film => {
-        document.getElementById('movie-title').innerText = film.title;
-        document.getElementById('movie-poster').src= film.poster;
-        document.getElementById('movie-description').textContent = film.description;
-        document.getElementById('movie-runtime').textContent = film.runtime;
-        document.getElementById('movie-showtime').textContent = film.showtime;
-        document.getElementById('movie-capacity').textContent = film.capacity;
-        document.getElementById('movie-ticket').textContent = film.tickets_sold;
+    .then(response => response.json())// parsing the json response
+    .then(films => {
+        document.getElementById('movie-title').innerText = films.title;
+        document.getElementById('movie-poster').src= films.poster;
+        document.getElementById('movie-description').textContent = films.description;
+        document.getElementById('movie-runtime').textContent = films.runtime;
+        document.getElementById('movie-showtime').textContent = films.showtime;
+        document.getElementById('movie-capacity').textContent = films.capacity;
+        document.getElementById('movie-ticket').textContent = films.tickets_sold;
 
 
-        const availableTickets = calculateAvailableTickets(film);
-        document.getElementById('available-tickets').textContent = film.availableTickets;
+        const availableTickets = calculateAvailableTickets(films);
+        document.getElementById('available-tickets').textContent = films.availableTickets;
         const buyTicketButton = document.getElementById('buy-ticket-button');
         buyTicketButton.disabled = availableTickets <= 0;
 
@@ -37,4 +37,9 @@ fetch(filmUrl)
         });
     })
     .catch(error => console.error('Error fetching film details:', error));
+
+    
+    
+
+    
 
