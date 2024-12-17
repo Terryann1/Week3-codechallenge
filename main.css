@@ -87,16 +87,11 @@ main {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 25%;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    overflow-y: auto;
-    height: auto; /* Remove the fixed height to allow flexibility */
-    display: list-item;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start; /* Align the items from the top */
+   display:flex;
+   flex-direction:column;
+   height:100vh;
+   justify-content: flex-start;
+   align-items: flex-start;
 }
 
 #movies-list {
